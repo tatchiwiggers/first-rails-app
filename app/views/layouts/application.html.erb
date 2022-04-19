@@ -11,12 +11,11 @@
 
   <body>
     <div style="background: violet; padding: 16px;">
-      <%#= link_to 'texto', prefixo_da_rota_path  %>
+      
       <p><%= link_to 'Know more about us', about_path %></p>
       <p><%= link_to 'Meet our teachers', contact_path %></p>
       <form action="/contact" method="get">
         <input type="text" name="teacher" placeholder="Who are you looking for?" value="<%= params[:teacher] %>">
-        <input type="text" name="message" placeholder="Send the teacher a msg?" value="<%= params[:message] %>">
         <input type="submit">
       </form>
     </div>

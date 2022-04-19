@@ -9,11 +9,12 @@ class PagesController < ApplicationController
 
   def contact
     search = params[:teacher]
-    @teachers = ['tatchi', 'gui', 're', 'mariana', 'carlos']
+    @teachers = ['Tatchi', 'Fernanda', 'Leandro', 'Mariana', 'Bianca']
 
+    # here we create a condition to only get the teachers we are interested in
     if search.present?
       @teachers = @teachers.select { |teacher| teacher.downcase == search.downcase }
     end
-    raise
+    # raise
   end
 end
